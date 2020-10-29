@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17504.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,58 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="I_Am_Rich" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OpT-ds-wMY" userLabel="Diamond Image">
+                                <rect key="frame" x="45" y="272" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="5En-wi-VXG"/>
+                                    <constraint firstAttribute="width" constant="300" id="rdt-dg-CGj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm Rich..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwK-U3-m0I" userLabel="Top Label">
+                                <rect key="frame" x="121" y="199" width="148" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="148" id="fuw-dc-eq1"/>
+                                    <constraint firstAttribute="height" constant="43" id="nXk-mT-2EF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="... and You're Not!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEO-sE-11q" userLabel="Bottom Label">
+                                <rect key="frame" x="61.666666666666657" y="602" width="267" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="9JR-4Y-uPw"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="267" id="t1E-19-xUH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OpT-ds-wMY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="77U-40-ibX"/>
+                            <constraint firstItem="LEO-sE-11q" firstAttribute="top" secondItem="OpT-ds-wMY" secondAttribute="bottom" constant="30" id="EPZ-7H-42d"/>
+                            <constraint firstItem="hwK-U3-m0I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lgs-cX-4kQ"/>
+                            <constraint firstItem="OpT-ds-wMY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U62-eI-AwH"/>
+                            <constraint firstItem="LEO-sE-11q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aob-az-b1v"/>
+                            <constraint firstItem="OpT-ds-wMY" firstAttribute="top" secondItem="hwK-U3-m0I" secondAttribute="bottom" constant="30" id="fY8-e3-pqb"/>
+                            <constraint firstItem="OpT-ds-wMY" firstAttribute="top" secondItem="hwK-U3-m0I" secondAttribute="bottom" constant="30" id="pSD-4z-kFq"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="diamondImage" destination="OpT-ds-wMY" id="Om1-gH-RVp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="94"/>
         </scene>
     </scenes>
 </document>

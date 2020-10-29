@@ -8,12 +8,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+// MARK: IB-Outlets
+    
+    @IBOutlet weak var diamondImage: UIImageView!
+    
+// MARK: Methods
+    
+    /// Tag: viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        diamondImage.image = UIImage(named: "diamond")
     }
-
-
 }
 
